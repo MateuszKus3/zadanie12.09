@@ -1,0 +1,53 @@
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label>
+        liczba1
+        <input type="text" id="liczba1" />
+      </label>
+      <label>
+        liczba2
+        <input type="text" id="liczba2" />
+      </label>
+      <button id="dodawanie">+</button>
+      <button id="odejmowanie">-</button>
+      <button id="mnozenie">*</button>
+      <button id="dzielenie">/</button>
+    </form>
+    <p></p>
+    <script>
+      const l1 = document.querySelector('#liczba1');
+      const l2 = document.querySelector('#liczba2');
+      const dodawanie = document.querySelector('#dodawanie');
+      const odejmowanie = document.querySelector('#odejmowanie');
+      const mnozenie = document.querySelector('#mnozenie');
+      const dzielenie = document.querySelector('#dzielenie');
+      const p = document.querySelector('p');
+      dodawanie.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        const suma = parseInt(l1.value) + parseInt(l2.value);
+        p.innerHTML = suma;
+      })
+      odejmowanie.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        const suma = parseInt(l1.value) - parseInt(l2.value);
+        p.innerHTML = suma;
+      })
+      mnozenie.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        const suma = parseInt(l1.value) * parseInt(l2.value);
+        p.innerHTML = suma;
+      })
+      dzielenie.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        const suma = parseInt(l1.value) / parseInt(l2.value);
+        p.innerHTML = suma;
+      })
+    </script>
+  </body>
+</html>
